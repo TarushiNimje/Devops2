@@ -2,26 +2,18 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
-            steps {
-                git 'https://github.com/your-repo/your-project.git'
-            }
-        }
+    steps {
+        echo 'Code was already checked out by Jenkins.'
+     }
+   }
         stage('Build') {
             steps {
-                echo 'Building...'
-                // Add build commands here
+                echo 'This is where the build would happen if you had one.'
             }
         }
         stage('Test') {
             steps {
-                echo 'Running Tests...'
-                // Add test commands here
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
-                // Add deploy commands here
+                echo 'Pretend tests are running here.'
             }
         }
     }
